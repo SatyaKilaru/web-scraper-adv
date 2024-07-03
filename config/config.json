@@ -1,0 +1,15 @@
+{
+  "websites": [
+    {
+      "url": "https://example.com",
+      "titleXPath": "//h1",
+      "bodyXPath": "//div[@class='content']"
+    },
+    {
+      "url": "https://another-example.com",
+      "titleXPath": "//h2",
+      "bodyXPath": "//article"
+    }
+  ],
+  "outputDir": "output"
+}

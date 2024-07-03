@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-scraper-adv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-scraper-adv
+  template:
+    metadata:
+      labels:
+        app: web-scraper-adv
+    spec:
+      containers:
+      - name: web-scraper-adv
+        image: satyakilaru/web-scraper-adv:latest
+        volumeMounts:
+        - name: config
+          mountPath: /app/config
+        - name: output
+          mountPath: /app/output
+      volumes:
+      - name: config
+        emptyDir: {}
+      - name: output
+        emptyDir: {}
